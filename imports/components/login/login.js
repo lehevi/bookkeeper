@@ -13,6 +13,9 @@ class LoginCtrl {
       text: 'This is task 3'
     }];
   }
+  login(){
+    console.log("LOgin bro");
+  }
 }
 
 export default angular.module('login', [
