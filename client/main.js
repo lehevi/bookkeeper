@@ -1,13 +1,8 @@
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
+import { Accounts } from '../collections/accounts';
+ 
+import { name as  Bookkeeper } from '../imports/ui/components/bookkeeper/bookkeeper';
 
-import login from '../imports/components/login/login';
-import mainPage from '../imports/components/mainPage/mainPage'
 
-import './main.html';
-
-angular.module('bookkeeper', [
-  angularMeteor,
-  login.name,
-  mainPage.name
-]);
+  
