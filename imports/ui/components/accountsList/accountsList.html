@@ -4,5 +4,6 @@
         <li ng-repeat="account in accountsList.accounts">
             <p>Account: {{account.title}}</p>
             <p>Amount: {{account.amount}}</p>
+            <remove-account account="account"></remove-account>
         </li>
     </ul>
