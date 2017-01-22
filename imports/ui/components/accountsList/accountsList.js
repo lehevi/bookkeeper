@@ -1,5 +1,6 @@
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
+import uiRouter from 'angular-ui-router';
  
 import template from './accountsList.html';
 import { name as AddAccount } from '../addAccount/addAccount';
@@ -22,10 +23,20 @@ const name = "accountsList";
 
 export default angular.module(name, [
   angularMeteor, 
+  uiRouter, 
   AddAccount,
   RemoveAccount
 ]).component(name,  {
     template,
     controllerAs: name,
     controller: AccountsList
-  }); 
+  }).config(config);
+
+  function config($stateProvider){
+    'ngInject';
+    $stateProvider
+      .state('accounts',{
+        url: '/accounts',
+        template: '<accounts-list></accounts-list>'
+      });
+  } 

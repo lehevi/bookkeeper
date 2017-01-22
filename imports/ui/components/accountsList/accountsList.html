@@ -2,7 +2,9 @@
     <add-account></add-account>
     <ul>
         <li ng-repeat="account in accountsList.accounts">
-            <p>Account: {{account.title}}</p>
+        	<a ui-sref="accountDetails({ accountId: account._id})">
+        		Account: {{account.title}}
+        	</a>
             <p>Amount: {{account.amount}}</p>
             <remove-account account="account"></remove-account>
         </li>
