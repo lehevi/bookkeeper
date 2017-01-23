@@ -1,1 +1,15 @@
-The Account you selected is: {{ accountDetails.accountId }}
+The Account you selected iss:  {{ accountDetails.accountId}}
+<form >
+	Account Title: <input type="text" ng-model="accountDetails.account.title">
+	Ammount: <input type="text" ng-model="accountDetails.account.amount">
+	<button ng-click="accountDetails.save()">Save</button>
+</form>
+<button ui-sref="accounts">Back</button>
+<div>TEST: {{accountDetails.testo}}</div>
+    <ul>
+        <li ng-repeat="accounti in accountDetails.accounts">
+ 
+        	<span> {{accounti._id}} </span>
+
+        </li>
+    </ul>
